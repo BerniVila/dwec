@@ -43,6 +43,21 @@
 
     // Add your code here
 
+    function drawRect(x, y, width, height, color) {
+
+      ctx.clearRect( 0, 0, canvas.width, canvas.height);
+
+      ctx.strokeStyle = 'red';
+      ctx.strokeRect(x, y, width, height);
+
+      ctx.fillStyle = color;
+      ctx.fillRect(x, y, width, height);
+    }
+
+    drawRect(x, y, width, height, color);
+    //the next rectangle tests if the function erases the first rectangle
+    drawRect(300, y, width, height, color);
+
     // Don't edit the code below here!
 
     const section = document.querySelector('section');

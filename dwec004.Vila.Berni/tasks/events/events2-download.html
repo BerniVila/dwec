@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="utf-8"/>
+    <meta charset="utf-8" />
     <title>Events: Task 2</title>
     <style>
       p {
@@ -21,15 +21,9 @@
   </head>
 
   <body>
+    <section class="preview"></section>
 
-    <section class="preview">
-    </section>
-
-    <canvas width="480" height="320" tabindex="0">
-
-    </canvas>
-
-
+    <canvas width="480" height="320" tabindex="0"> </canvas>
   </body>
   <script>
     let canvas = document.querySelector('canvas');
@@ -53,6 +47,27 @@
 
     // Add your code here
 
-  </script>
+    window.addEventListener('keypress', function (e) {
+      switch (e.key) {
+        case 'd':
+          x += 1;
+          break;
 
+        case 'a':
+          x -= 1;
+          break;
+
+        case 'w':
+          y -= 1;
+          break;
+
+        case 's':
+          y += 1;
+          break;
+      }
+      drawCircle(x, y, size);
+    });
+
+    
+  </script>
 </html>

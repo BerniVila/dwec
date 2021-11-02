@@ -31,6 +31,18 @@
 
     // Add your code here
 
+    // for (let i = 0; i < myArray.length; i++) {
+    //   let listElement = document.createElement('li');
+    //   listElement.textContent = myArray[i];
+    //   list.appendChild(listElement);
+    // }
+
+   myArray.forEach(vegetable => {
+    let listElement = document.createElement('li');
+      listElement.textContent = vegetable;
+      list.appendChild(listElement);
+   });
+   
     // Don't edit the code below here!
 
     const section = document.querySelector('section');
